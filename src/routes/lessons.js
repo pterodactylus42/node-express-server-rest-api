@@ -25,8 +25,12 @@ router.post('/', cors(corsOptions), (req, res) => {
   // todo: add lesson fields
   const lesson = {
     id,
-    text: req.body.text,
-    userId: req.context.me.id,
+    name: req.body.name,
+    frequency: req.body.frequency,
+    date: req.body.date,
+    duration: req.body.duration, 
+    venue: req.body.venue,
+    pupils: req.body.pupils
   };
 
   req.context.models.lessons[id] = lesson;
